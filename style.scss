@@ -1,0 +1,628 @@
+@import "vars";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@media (min-width: 1025px) {
+  .title {
+    width: 792px;
+  }
+}
+input,
+button {
+  font-family: inherit;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  &:hover {
+    color: #000000; /* Цвет ссылки при наведении */
+    text-decoration: underline; /* Добавляем подчёркивание */
+  }
+}
+
+/*
+  .container{
+    width: 1200px;
+    margin: auto;
+  }
+  */
+
+.center {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+
+.top {
+  height: 735px;
+  background-image: url(img/topback.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  &_text {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 16px;
+    color: #fff;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+}
+.top_item {
+  margin-bottom: 35px;
+  height: 400px;
+  background-image: url(image/Rectangle\ 29.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.header {
+  /*
+    height: 77px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px
+    colid rgba(255, 255, 255, 0.80); */
+  height: 76px;
+  display: flex;
+
+  padding: 16px 0px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.8);
+  &_input {
+    width: 288px;
+    height: 41px;
+    border: 1px solid $color-text;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: transparent;
+    outline: none;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 20px;
+    color: $color-text;
+    padding-left: 32px;
+    padding-right: 32px;
+    box-sizing: border-box;
+    &::placeholder {
+      color: $color-text;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  gap: 32px;
+  &_link {
+    line-height: 20px;
+
+    color: #fff;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+  &-mob {
+    display: none;
+  }
+}
+
+.title {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 70px;
+  margin-top: 64px;
+  margin-bottom: 16px;
+  color: $color-text;
+  font-style: normal;
+  margin-top: 64px;
+  margin-bottom: 16px;
+  max-width: 792px;
+}
+.title_item {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 70px;
+  margin-top: 64px;
+  margin-bottom: 16px;
+  color: #fff;
+  font-style: normal;
+  margin-top: 127px;
+  margin-bottom: 126px;
+}
+
+.link {
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration-line: underline;
+}
+
+.nav_catalog {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  margin-bottom: 41px;
+  padding: top 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_item {
+  display: flex;
+
+  list-style-type: none;
+}
+.nav_link:hover {
+  text-decoration: underline;
+}
+
+.nav-slash:not(:last-child)::after {
+  content: "/";
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.nav_link {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+.select {
+  position: relative;
+}
+.select::after{
+  content: "";
+  display: block;
+  border-style: solid;
+  border-width: 6px 5px 0 5px;
+  border-color: #000 transparent transparent transparent;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  z-index: 1;
+  margin-top: -3px;
+  background-image: url(image/select.svg);
+}
+.select_item {
+  padding: 11px 75px 10px 14px;
+  border-radius: 20px;
+  border: 1px solid #c4c4c4;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: relative;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  background-image: url(image\Polygon\ 1.svg);
+  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 246px 15px;
+  background-size: 20px 11px;
+}
+
+.for-box {
+  padding-top: 64px;
+}
+
+.for {
+  margin-top: 32px;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.for_item {
+  height: 415px;
+  grid-column: span 4;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 41px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.for_item_big {
+  grid-column: span 6;
+  transition: all 0.3s;
+  box-sizing: border-box;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 5px 5px grey;
+  }
+}
+
+.for_img_1 {
+  background-image: url(img/rest.jpg);
+}
+
+.for_img_2 {
+  background-image: url(img/Job.jpg);
+}
+
+.for_img_3 {
+  background-image: url(img/KITCHENS.jpg);
+  transition: all 0.3s;
+
+  box-sizing: border-box;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 5px 5px grey;
+  }
+}
+
+.for_img_4 {
+  background-image: url(img/CHILDREN.jpg);
+  transition: all 0.3s;
+  padding: 11px;
+  box-sizing: border-box;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 5px 5px grey;
+  }
+}
+
+.for_img_5 {
+  background-image: url(img/BATHROOM.jpg);
+  transition: all 0.3s;
+  padding: 11px;
+  box-sizing: border-box;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 5px 5px grey;
+  }
+}
+
+/*
+  
+  
+  
+  
+  
+  
+  
+  */
+
+.product-box {
+  padding-top: 64px;
+}
+
+.product {
+  width: 378px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.3s;
+position: relative;
+  box-sizing: border-box;
+  &:hover  {
+    transform: scale(1.05);
+    box-shadow: 10px 5px 5px grey;
+    
+  }
+}
+.svg_container {
+  position: absolute;
+  top: 10px;
+  right: 10px; 
+  display: flex;
+  flex-direction: row;
+  gap: 21px; 
+  overflow: hidden;
+  z-index: 2;
+  
+  opacity: 0;
+  transition: opacity 0.3s ease; 
+}
+.svg_container:hover{
+  transform: scale(1.10);
+
+  
+}
+
+
+
+
+.product_img {
+  height: 250px;
+  
+
+
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+}
+.product:hover .svg_container{
+  opacity: 1;
+}
+
+.product_img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background-image: url("img/heart_outlineserdze.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+  
+}
+
+.heading {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 59px;
+
+  font-style: normal;
+  color: #000000;
+}
+
+.product-content {
+  margin-top: 32px;
+  display: flex;
+  column-gap: 32px;
+  row-gap: 56px;
+  flex-wrap: wrap;
+}
+
+.product_heading {
+  line-height: 29px;
+  margin-bottom: 8px;
+  margin-top: 10px;
+  color: #000000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.product_text {
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 12px;
+  color: #888888;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.product_box-price {
+  display: flex;
+  gap: $gap;
+  flex-wrap: wrap;
+}
+
+.product_price {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #050505;
+  font-style: normal;
+  line-height: normal;
+}
+
+.product_price_sale {
+  line-height: 29px;
+  text-decoration-line: line-through;
+  color: #888888;
+}
+
+.link-box {
+  padding-top: 39px;
+  padding-bottom: 64px;
+}
+.link-box_cat {
+  height: 58px;
+  margin-top: 32px;
+  margin-bottom: 64px;
+}
+
+.link-box_bottom {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration-line: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.center {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+.footer {
+  background: #F7F6F6;
+  padding-top: 32px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &_input {
+    background: #ffffff;
+    border: 1px solid #c4c4c4;
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 268px;
+    height: 46px;
+    padding-left: 24px;
+    padding-right: 24px;
+    box-sizing: border-box;
+    font-size: 15px;
+    line-height: 18px;
+    font-family: "Montserrat";
+    &::placeholder {
+      color: #c4c4c4;
+    }
+  }
+}
+
+.footer_content {
+  width: 789px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer_logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.footer_info {
+  display: flex;
+  gap: 129px;
+}
+
+.footer_item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer_menu {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 12px;
+}
+
+.footer_contacts {
+  color: #000;
+
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 12px;
+}
+
+.footer_heading {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: normal;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.footer_link {
+  font-weight: 500;
+  line-height: 17px;
+  color: #888888;
+  text-decoration: none;
+  color: #888;
+  font-size: 14px;
+
+  &:hover {
+    text-decoration: underline;
+    color: #000000;
+  }
+}
+
+.footer_icon:hover path {
+  fill: #000000;
+  transition: fill 1.5s;
+}
+.footer__icon_list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer_text {
+  color: #000;
+
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 4px;
+}
+
+.footer_form {
+  display: flex;
+  flex-direction: column;
+  ;
+}
+
+.form_button {
+  margin-top: 15px;
+  background: rgba(222, 215, 215, 0.41);
+  border: 1px solid $color-text;
+  box-sizing: border-box;
+  border-radius: 20px;
+  width: 275px;
+  height: 46px;
+  font-size: 15px;
+  line-height: 18px;
+  color: #000000;
+  color: #000;
+
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: all 0.8s;
+  &:hover {
+    color: #ffffff;
+    background-color: #000000;
+  }
+}
+.form_button_cat {
+  color: #000;
+  font-family: "Roboto";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+@import "cart";
+@import "tablet";
+@import "mobile";
